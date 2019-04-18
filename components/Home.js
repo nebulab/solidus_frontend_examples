@@ -39,13 +39,17 @@ export function Product ({ product }) {
   return (
     <article>
       {/* <pre>{JSON.stringify(product, null, 2)}</pre> */}
-      <figure>
-        <img src={mainImage.smallUrl} alt={mainImage.altText || product.name} width="100" height="100"/>
-        <figcaption>
-          <div>{product.name}</div>
-          <div>{formattedPrice}</div>
-        </figcaption>
-      </figure>
+      <Link prefetch as={`/products/${product.slug}`} href={`/product?slug=${product.slug}`}>
+        <a>
+          <figure>
+            <img src={mainImage.smallUrl} alt={mainImage.altText || product.name} width="100" height="100"/>
+            <figcaption>
+              <div>{product.name}</div>
+              <div>{formattedPrice}</div>
+            </figcaption>
+          </figure>
+        </a>
+      </Link>
       <style jsx>{`
         article {
           float: left;
