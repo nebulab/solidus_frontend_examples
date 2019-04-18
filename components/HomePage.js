@@ -59,13 +59,13 @@ export function Product ({ product }) {
   )
 }
 
-export function Products (props) {
+export function Products ({ products }) {
   return (
-    props.products.map(v => <Product key={v.id} product={v}/>)
+    products.map(v => <Product key={v.id} product={v}/>)
   )
 }
 
-export default function Home () {
+export default function HomePage () {
   return (
     <Query query={homeQuery} variables={homeQueryVars}>
       {({ loading, error, data }) => {
