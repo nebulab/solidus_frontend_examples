@@ -1,10 +1,10 @@
 import App from '../components/App'
 import Header from '../components/Header'
-import Product from '../components/Product'
+import ProductPage from '../components/ProductPage'
 
 export default props => (
   <App>
     <Header />
-    <Product />
+    <ProductPage />
   </App>
 )
