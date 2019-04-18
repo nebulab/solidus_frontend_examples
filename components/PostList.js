@@ -26,7 +26,7 @@ export default function PostList () {
   return (
     <Query query={allPostsQuery} variables={allPostsQueryVars}>
       {({ loading, error, data: { allPosts, _allPostsMeta }, fetchMore }) => {
-        if (error) return <ErrorMessage message='Error loading posts.' />
+        if (error) return <ErrorMessage message='Error loading data.' />
         if (loading) return <div>Loading</div>
 
         const areMorePosts = allPosts.length < _allPostsMeta.count

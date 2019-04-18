@@ -29,7 +29,7 @@ export default withRouter(props => {
     <Query query={productQuery} variables={productQueryVars(props.router.query.slug)}>
       {({ loading, error, data }) => {
         if (loading) return <div>Loading</div>
-        if (error) return <ErrorMessage message='Error loading product.' />
+        if (error) return <ErrorMessage message='Error loading data.' />
         return (
           <div>
             <Product product={data.productBySlug} />

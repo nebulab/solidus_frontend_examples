@@ -70,7 +70,7 @@ export default function Home () {
     <Query query={homeQuery} variables={homeQueryVars}>
       {({ loading, error, data }) => {
         if (loading) return <div>Loading</div>
-        if (error) return <ErrorMessage message='Error loading posts.' />
+        if (error) return <ErrorMessage message='Error loading data.' />
         return (
           <section>
             <Products products={data.products.nodes} />
