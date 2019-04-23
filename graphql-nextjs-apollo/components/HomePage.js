@@ -4,9 +4,10 @@ import ErrorMessage from './ErrorMessage'
 import Link from 'next/link'
 
 export const homeQuery = gql`
-  query homeQuery($productsFirst: Int!, $productsAfter: String) {
+  query homeQuery($productsFirst: Int, $productsAfter: String) {
     products(first: $productsFirst, after: $productsAfter) {
       nodes {
+        id
         images(first: 1) {
           nodes {
             altText
