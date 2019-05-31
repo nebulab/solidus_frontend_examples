@@ -46,14 +46,19 @@ export function Product ({ product }) {
             <img src={mainImage.smallUrl} alt={mainImage.altText || product.name} width="100" height="100"/>
             <figcaption>
               <div>{product.name}</div>
-              <div>{formattedPrice}</div>
             </figcaption>
           </figure>
         </a>
       </Link>
+      <div>{formattedPrice}</div>
       <style jsx>{`
         article {
           float: left;
+          margin: 0 1em;
+          width: 240px;
+        }
+        figure {
+          margin: 0;
         }
         `}</style>
     </article>
